@@ -1,0 +1,3 @@
+{"model": "AI-Growth-Lab/PatentSBERTa", "revision": "3ff1d553c861d8f5bfd902333d97fc95eb6b4c8f", "pooling": "CLS",
+ "query_prefix": "", "doc_prefix": "", "q_len": 512, "d_len": 512,
+ "comment": "CLS pooling as in its 1_Pooling config, no prefix, 512 positions; we encoded it in fp32 (--dtype float32)"}

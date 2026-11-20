@@ -1,0 +1,4 @@
+{"model": "datalyes/patembed-large", "revision": "2d5c0f92a3e5dc3d5415c08e612c57543c0e03ad", "pooling": "MEAN",
+ "query_prefix": "encode query for mixed document retrieval: ", "doc_prefix": "encode document for mixed retrieval: ",
+ "q_len": 512, "d_len": 512,
+ "comment": "mean pooling including the prompt tokens; the retrieval_MIXED prompt pair; licence CC BY-NC-SA (baseline only)"}

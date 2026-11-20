@@ -1,0 +1,25 @@
+{
+  "name": "fusion-v1",
+  "description": "Search-time stages of the recommended system (Anticipate-0.6B + passages + CPC strict + BM25). Weights were tuned on dev half A (md5(query_id) even) and reported on dev half B; the test half was scored once with these values.",
+  "stages": ["passages", "cpc_strict", "bm25"],
+  "k": 1000,
+  "passages": {
+    "method": "max",
+    "comment": "family score = max(document score, best description-chunk score); a family missing from one list counts as missing_score there",
+    "chunk_search_depth": 4000,
+    "missing_score": -9.0
+  },
+  "cpc_strict": {
+    "weight": 0.75,
+    "comment": "fused = z(score) + weight * level / 3 over the query's list; z = per-query z-score (population SD, +1e-9); level = best agreement between the CPC printed on the query document and the current CPC of the candidate family's members published before the query's priority date",
+    "levels": {"full_symbol": 3, "main_group": 2, "subclass": 1, "none": 0},
+    "query_cpc": "cpc_printed",
+    "candidate_cpc": "cpc_current",
+    "candidate_members": "pub_date < query priority_date"
+  },
+  "bm25": {
+    "weight": 0.2,
+    "comment": "fused = z(previous stage) + weight * z(BM25) over the union of both lists; a family missing from a list gets that list's minimum z",
+    "method": "zscore"
+  }
+}

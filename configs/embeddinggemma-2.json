@@ -1,0 +1,3 @@
+{"model": "google/embeddinggemma-2", "revision": "f9972ac22e696a105c482202646979e33e4b5a1e", "pooling": "NATIVE",
+ "query_prefix": "task: search result | query: ", "doc_prefix": "title: none | text: ", "q_len": 4096, "d_len": 8192,
+ "comment": "the model card's own prompts and pooling (NATIVE = no pooling override in vLLM)"}

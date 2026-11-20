@@ -1,0 +1,15 @@
+# Levels 3-4 (encoding with vLLM, training). Exact versions of the environment that produced the published runs
+# (Python 3.12, NVIDIA driver 580). Install on a CUDA machine: pip install -r requirements-gpu.txt
+vllm==0.33.0
+torch==2.14.0
+transformers==5.20.2
+tokenizers==0.23.3
+peft==0.21.2
+accelerate==1.15.0
+safetensors==0.8.0
+huggingface_hub==2.4.0
+numpy==2.3.5
+pyarrow==26.0.1
+duckdb==2.0.0
+# not in our GPU lock (used on CPU in our runs): sentence-transformers for the "st" encoder backend
+sentence-transformers>=3.0

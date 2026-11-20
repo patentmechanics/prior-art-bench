@@ -1,0 +1,2 @@
+{"model": "Octen/Octen-Embedding-0.6B", "revision": "b54faa2ba2ae9eb618f88526cec6dae3287eb5f8", "pooling": "LAST",
+ "query_prefix": "instruction", "doc_prefix": "", "q_len": 4096, "d_len": 8192}

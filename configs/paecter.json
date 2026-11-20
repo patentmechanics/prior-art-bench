@@ -1,0 +1,3 @@
+{"model": "mpi-inno-comp/paecter", "revision": "8fee86cd06a47589b0e57428c48d03261fdcc0cc", "pooling": "MEAN",
+ "query_prefix": "", "doc_prefix": "", "q_len": 512, "d_len": 512,
+ "comment": "no instruction; 512 positions, so texts are cut to title + abstract + the start of the claims"}

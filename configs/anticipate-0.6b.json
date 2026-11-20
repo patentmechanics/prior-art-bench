@@ -1,0 +1,3 @@
+{"model": "patentmechanics/anticipate-0.6b", "revision": null, "pooling": "LAST",
+ "query_prefix": "instruction", "doc_prefix": "", "q_len": 4096, "d_len": 8192,
+ "comment": "query_prefix 'instruction' = the model's prompts query (office actions) / invalidity_query (PTAB); pin the revision of the release you evaluate"}
